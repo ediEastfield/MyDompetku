@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_detail_cashflow">
+
+    <ImageView
+        android:id="@+id/iv_detail_icon_cashflow"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#F4F4F4"
+        android:contentDescription="@string/image_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H, 1.5:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_detail_category_cashflow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_detail_icon_cashflow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_detail_icon_cashflow"
+        app:layout_constraintTop_toTopOf="@+id/iv_detail_icon_cashflow"
+        tools:text="@string/text_primary" />
+
+    <TextView
+        android:id="@+id/tv_detail_note_cashflow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#48424b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_detail_icon_cashflow"
+        app:layout_constraintTop_toBottomOf="@+id/iv_detail_icon_cashflow"
+        tools:text="@string/text_subtitle" />
+
+    <TextView
+        android:id="@+id/tv_detail_nominal_cashflow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_note_cashflow"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_note_cashflow"
+        tools:text="@string/text_nominal" />
+
+    <ImageView
+        android:id="@+id/iv_calender"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#F4F4F4"
+        android:contentDescription="@string/image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/calendar"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_nominal_cashflow"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_nominal_cashflow" />
+
+    <TextView
+        android:id="@+id/tv_detail_date_cashflow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_calender"
+        app:layout_constraintStart_toEndOf="@+id/iv_calender"
+        app:layout_constraintTop_toTopOf="@+id/iv_calender"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

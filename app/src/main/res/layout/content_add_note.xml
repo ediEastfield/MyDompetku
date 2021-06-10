@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="64dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="#F4F4F4"
+    app:cardCornerRadius="8dp"
+    tools:showIn="@layout/activity_add_note">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#F4F4F4"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/btn_icon"
+            app:layout_constraintTop_toTopOf="@+id/btn_icon"
+            tools:text="@string/text_primary" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_icon" />
+
+        <ImageView
+            android:id="@+id/iv_note"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:background="#F4F4F4"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/note"
+            app:layout_constraintDimensionRatio="H,1.5:1"
+            app:layout_constraintStart_toStartOf="@+id/btn_icon"
+            app:layout_constraintTop_toBottomOf="@+id/btn_icon" />
+
+        <EditText
+            android:id="@+id/edt_note"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="note"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_category"
+            app:layout_constraintTop_toTopOf="@+id/iv_note"
+            tools:ignore="LabelFor" />
+
+        <ImageButton
+            android:id="@+id/btn_date"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/calendar"
+            app:layout_constraintStart_toStartOf="@+id/iv_note"
+            app:layout_constraintTop_toBottomOf="@+id/iv_note"
+            android:contentDescription="@string/image_description" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/edt_note"
+            app:layout_constraintTop_toTopOf="@+id/btn_date"
+            tools:text="@string/text_subtitle" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/btn_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_date" />
+
+        <ImageView
+            android:id="@+id/iv_nominal"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:background="#F4F4F4"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nominal"
+            app:layout_constraintDimensionRatio="H,1.5:1"
+            app:layout_constraintStart_toStartOf="@+id/btn_date"
+            app:layout_constraintTop_toBottomOf="@+id/btn_date" />
+
+        <EditText
+            android:id="@+id/edt_nominal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="10000"
+            android:inputType="numberDecimal"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_nominal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_date"
+            app:layout_constraintTop_toTopOf="@+id/iv_nominal"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_jenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/save"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_nominal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
